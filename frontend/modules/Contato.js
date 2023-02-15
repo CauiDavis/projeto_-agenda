@@ -25,12 +25,16 @@ export default class Contato {
         const telefoneInput = el.querySelector('input[name="telefone"]');
         let error = false;
 
-        if (!validator.isEmail(emailInput.value) && telefoneInput.value == '') {
-            alert('Pelo menos um contato precisa ser enviado: email ou telefone');
+        if(emailInput.value == '' && telefoneInput.value == '') {
+            document.getElementById('span4').style.display = 'block';
+            document.getElementById('span3').style.display = 'block';
+            document.getElementById('span1').style.display = 'none';
             error = true;
         }
         if(nomeInput.value == ''){
-            alert('Nome é um campo obrigatório');
+            document.getElementById('span4').style.display = 'none';
+            document.getElementById('span3').style.display = 'none';
+            document.getElementById('span1').style.display = 'block';
             error = true;
         }
         if(!error) {
