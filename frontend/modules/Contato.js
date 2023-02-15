@@ -25,7 +25,7 @@ export default class Contato {
         const telefoneInput = el.querySelector('input[name="telefone"]');
         let error = false;
 
-        if(emailInput.value == '' && telefoneInput.value == '') {
+        if ((emailInput.value == '' || !validator.isEmail(this.body.email)) && telefoneInput.value == '') {
             document.getElementById('span4').style.display = 'block';
             document.getElementById('span3').style.display = 'block';
             document.getElementById('span1').style.display = 'none';
