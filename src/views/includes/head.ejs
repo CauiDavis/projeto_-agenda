@@ -19,7 +19,35 @@
     display: none;
     color: red;
   }
+  .cartao{
+    display: none;
+  }
+  #card-cadastro{
+    display: none;
+  }
   </style>
+
+  <script>
+    function cadastro(){
+      document.getElementById('card-cadastro').style.display = 'block';
+      document.getElementById('card-login').style.display = 'none';
+      document.getElementById('span5').style.display = 'none';
+      document.getElementById('span7').style.display = 'none';
+      document.getElementById('span6').style.display = 'none';
+      document.getElementById('span8').style.display = 'none';
+    }
+    function login(){
+      document.getElementById('card-cadastro').style.display = 'none';
+      document.getElementById('card-login').style.display = 'block';
+      document.getElementById('span5').style.display = 'none';
+      document.getElementById('span7').style.display = 'none';
+      document.getElementById('span6').style.display = 'none';
+      document.getElementById('span8').style.display = 'none';
+    }
+    function redirectTime() {
+        window.location = "/src/views/index.ejs"
+    }
+  </script>
 
   <title>Agenda-de-contatos</title>
 </head>

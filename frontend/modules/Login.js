@@ -25,11 +25,17 @@ export default class Login {
         let error = false;
 
         if(!validator.isEmail(emailInput.value)) {
-            alert('E-mail inválido');
+            document.getElementById('span5').style.display = 'block';
+            document.getElementById('span7').style.display = 'block';
+            document.getElementById('span6').style.display = 'none';
+            document.getElementById('span8').style.display = 'none';
             error = true;
         }
         if(passwordInput.value.length < 3 || passwordInput.value.length > 50){
-            alert('Senha precisa ter entre 3 e 50 caracteres');
+            document.getElementById('span5').style.display = 'none';
+            document.getElementById('span7').style.display = 'none';
+            document.getElementById('span6').style.display = 'block';
+            document.getElementById('span8').style.display = 'block';
             error = true;
         }
         if(!error) {
