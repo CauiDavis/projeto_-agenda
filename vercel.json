@@ -1,0 +1,10 @@
+{
+   "version": 2,
+   "name": "projeto4-agenda",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
+   ]
+}
